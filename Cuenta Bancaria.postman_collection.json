@@ -1,0 +1,493 @@
+{
+	"info": {
+		"_postman_id": "1cfbdc83-c15a-46d2-af7f-2a4b38ebfe05",
+		"name": "Cuenta Bancaria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cliente Crear",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Javier Lucero\",\r\n    \"genero\":\"mascullino\",\r\n    \"edad\":\"20\",\r\n    \"identificacion\":\"1720987453\",\r\n    \"direccion\":\"Chillogallo\",\r\n    \"telefono\":\"022435987\",  \r\n    \"contrasena\":\"12345\", \r\n    \"estado\":\"true\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6868/api/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cliente Obtener por identificacion",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identificacion\":\"1720987453\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6868/api/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cliente Actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"nombre\": \"Mario Lopez\",\r\n    \"identificacion\":\"1720987453\",\r\n    \"genero\":\"Masculino\",\r\n    \"edad\":\"30\",\r\n    \"direccion\":\"La mariscal\",\r\n    \"contrasena\":\"987654\",\r\n    \"estado\": \"true\",\r\n    \"telefono\": \"022653652\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6868/api/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cliente Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6868/api/clientes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"clientes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cuenta Crear",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identificacion\":\"1720987453\",\r\n    \"numero\":\"2006789453\",\r\n    \"tipoCuenta\":\"Ahorro\",\r\n    \"saldoInicial\":125\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6868/api/cuentas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cuenta Obtener por identificacion",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identificacion\":\"1720987453\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6868/api/cuentas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cuenta Obtener por id Cliente",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"idCliente\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6868/api/cuentas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cuenta Actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \"idCuenta\": 1,\r\n    \"estado\": \"true\",\r\n    \"numero\": 2006789453,\r\n    \"saldoInicial\": 135.0,\r\n    \"tipoCuenta\": \"Corriente\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6868/api/cuentas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cuenta Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:6868/api/cuentas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"cuentas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movimiento Crear",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identificacion\":\"1720987453\",\r\n    \"numeroCuenta\":\"2006789453\",\r\n    \"tipoMovimiento\":\"credito\",\r\n    \"valor\":\"20\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6868/api/movimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movimiento obtener Identificacion y numero cuenta",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identificacion\":\"1720987453\",\r\n    \"numeroCuenta\":\"2006789453\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6868/api/movimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movimiento Actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idMovimiento\":\"1\",\r\n    \"fecha\":\"23-04-2022 10:15:55\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6868/api/movimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movimiento Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:6868/api/movimientos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"movimientos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reporte",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:6868/api/reportes?fecha=2022-04-24,2022-04-25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6868",
+					"path": [
+						"api",
+						"reportes"
+					],
+					"query": [
+						{
+							"key": "fecha",
+							"value": "2022-04-24,2022-04-25"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

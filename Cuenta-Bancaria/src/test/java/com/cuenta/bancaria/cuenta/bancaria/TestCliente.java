@@ -35,7 +35,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, classes = TestServiceApplication.class)
 @TestMethodOrder(OrderAnnotation.class)
-public class TestRestTemplete {
+public class TestCliente {
 
 	@Autowired
 	private TestRestTemplate restTemplate;
